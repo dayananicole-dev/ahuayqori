@@ -11,9 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as PoliticaDePrivacidadRouteImport } from './routes/politica-de-privacidad'
 import { Route as ProductosRouteImport } from './routes/productos'
 import { Route as QuienesSomosRouteImport } from './routes/quienes-somos'
 import { Route as ServiciosRouteImport } from './routes/servicios'
+import { Route as TerminosYCondicionesRouteImport } from './routes/terminos-y-condiciones'
 import { Route as NoticiasIndexRouteImport } from './routes/noticias.index'
 import { Route as NoticiasSlugRouteImport } from './routes/noticias.$slug'
 
@@ -25,6 +27,11 @@ const IndexRoute = IndexRouteImport.update({
 const ContactoRoute = ContactoRouteImport.update({
   id: '/contacto',
   path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDePrivacidadRoute = PoliticaDePrivacidadRouteImport.update({
+  id: '/politica-de-privacidad',
+  path: '/politica-de-privacidad',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProductosRoute = ProductosRouteImport.update({
@@ -42,6 +49,11 @@ const ServiciosRoute = ServiciosRouteImport.update({
   path: '/servicios',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TerminosYCondicionesRoute = TerminosYCondicionesRouteImport.update({
+  id: '/terminos-y-condiciones',
+  path: '/terminos-y-condiciones',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const NoticiasIndexRoute = NoticiasIndexRouteImport.update({
   id: '/noticias/',
   path: '/noticias/',
@@ -56,18 +68,22 @@ const NoticiasSlugRoute = NoticiasSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
+  '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
   '/productos': typeof ProductosRoute
   '/quienes-somos': typeof QuienesSomosRoute
   '/servicios': typeof ServiciosRoute
+  '/terminos-y-condiciones': typeof TerminosYCondicionesRoute
   '/noticias/$slug': typeof NoticiasSlugRoute
   '/noticias/': typeof NoticiasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
+  '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
   '/productos': typeof ProductosRoute
   '/quienes-somos': typeof QuienesSomosRoute
   '/servicios': typeof ServiciosRoute
+  '/terminos-y-condiciones': typeof TerminosYCondicionesRoute
   '/noticias/$slug': typeof NoticiasSlugRoute
   '/noticias': typeof NoticiasIndexRoute
 }
@@ -75,9 +91,11 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
+  '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
   '/productos': typeof ProductosRoute
   '/quienes-somos': typeof QuienesSomosRoute
   '/servicios': typeof ServiciosRoute
+  '/terminos-y-condiciones': typeof TerminosYCondicionesRoute
   '/noticias/$slug': typeof NoticiasSlugRoute
   '/noticias/': typeof NoticiasIndexRoute
 }
@@ -86,27 +104,33 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/contacto'
+    | '/politica-de-privacidad'
     | '/productos'
     | '/quienes-somos'
     | '/servicios'
+    | '/terminos-y-condiciones'
     | '/noticias/$slug'
     | '/noticias/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/contacto'
+    | '/politica-de-privacidad'
     | '/productos'
     | '/quienes-somos'
     | '/servicios'
+    | '/terminos-y-condiciones'
     | '/noticias/$slug'
     | '/noticias'
   id:
     | '__root__'
     | '/'
     | '/contacto'
+    | '/politica-de-privacidad'
     | '/productos'
     | '/quienes-somos'
     | '/servicios'
+    | '/terminos-y-condiciones'
     | '/noticias/$slug'
     | '/noticias/'
   fileRoutesById: FileRoutesById
@@ -114,9 +138,11 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactoRoute: typeof ContactoRoute
+  PoliticaDePrivacidadRoute: typeof PoliticaDePrivacidadRoute
   ProductosRoute: typeof ProductosRoute
   QuienesSomosRoute: typeof QuienesSomosRoute
   ServiciosRoute: typeof ServiciosRoute
+  TerminosYCondicionesRoute: typeof TerminosYCondicionesRoute
   NoticiasSlugRoute: typeof NoticiasSlugRoute
   NoticiasIndexRoute: typeof NoticiasIndexRoute
 }
@@ -135,6 +161,13 @@ declare module '@tanstack/react-router' {
       path: '/contacto'
       fullPath: '/contacto'
       preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-privacidad': {
+      id: '/politica-de-privacidad'
+      path: '/politica-de-privacidad'
+      fullPath: '/politica-de-privacidad'
+      preLoaderRoute: typeof PoliticaDePrivacidadRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/productos': {
@@ -158,6 +191,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServiciosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/terminos-y-condiciones': {
+      id: '/terminos-y-condiciones'
+      path: '/terminos-y-condiciones'
+      fullPath: '/terminos-y-condiciones'
+      preLoaderRoute: typeof TerminosYCondicionesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/noticias/': {
       id: '/noticias/'
       path: '/noticias'
@@ -178,9 +218,11 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactoRoute: ContactoRoute,
+  PoliticaDePrivacidadRoute: PoliticaDePrivacidadRoute,
   ProductosRoute: ProductosRoute,
   QuienesSomosRoute: QuienesSomosRoute,
   ServiciosRoute: ServiciosRoute,
+  TerminosYCondicionesRoute: TerminosYCondicionesRoute,
   NoticiasSlugRoute: NoticiasSlugRoute,
   NoticiasIndexRoute: NoticiasIndexRoute,
 }
