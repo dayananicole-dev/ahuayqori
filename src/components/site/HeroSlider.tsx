@@ -46,6 +46,10 @@ const slides: Slide[] = [
 export function HeroSlider() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [videoOpen, setVideoOpen] = useState(false);
+  const openVideo = useCallback(() => setVideoOpen(true), []);
+  const closeVideo = useCallback(() => setVideoOpen(false), []);
+
 
   const go = useCallback((n: number) => setIndex((n + slides.length) % slides.length), []);
 
