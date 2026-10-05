@@ -3,6 +3,8 @@ import { Link } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { VideoButton, VideoModal } from "./VideoModal";
+
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
@@ -44,14 +46,19 @@ const slides: Slide[] = [
 export function HeroSlider() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [videoOpen, setVideoOpen] = useState(false);
+  const openVideo = useCallback(() => setVideoOpen(true), []);
+  const closeVideo = useCallback(() => setVideoOpen(false), []);
+
 
   const go = useCallback((n: number) => setIndex((n + slides.length) % slides.length), []);
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || videoOpen) return;
     const t = setTimeout(() => go(index + 1), 5000);
     return () => clearTimeout(t);
-  }, [index, paused, go]);
+  }, [index, paused, videoOpen, go]);
+
 
   return (
     <section
@@ -124,6 +131,10 @@ export function HeroSlider() {
                   </Button>
                 ))}
               </div>
+              <div className="mt-3 flex">
+                <VideoButton onClick={openVideo} tabIndex={i === index ? 0 : -1} />
+              </div>
+
             </div>
           ))}
         </div>
@@ -164,6 +175,9 @@ export function HeroSlider() {
           </div>
         </div>
       </div>
+
+      <VideoModal open={videoOpen} onClose={closeVideo} />
     </section>
   );
 }
+
