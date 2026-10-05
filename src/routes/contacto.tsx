@@ -9,12 +9,12 @@ import { Button } from "@/components/ui/button";
 import { contact, whatsappUrl } from "@/config/site";
 import hero2 from "@/assets/hero-2.jpg";
 
-type ContactoSearch = { producto?: string; servicio?: string };
+type ContactoSearch = { producto?: string | undefined; servicio?: string | undefined };
 
 export const Route = createFileRoute("/contacto")({
   validateSearch: (search: Record<string, unknown>): ContactoSearch => ({
-    producto: typeof search.producto === "string" ? search.producto : undefined,
-    servicio: typeof search.servicio === "string" ? search.servicio : undefined,
+    producto: typeof search["producto"] === "string" ? search["producto"] : undefined,
+    servicio: typeof search["servicio"] === "string" ? search["servicio"] : undefined,
   }),
   head: () => ({
     meta: [

@@ -68,8 +68,8 @@ export function Gallery() {
             <X className="size-5" />
           </button>
           <img
-            src={items[open].src}
-            alt={items[open].alt}
+            src={items[open]!.src}
+            alt={items[open]!.alt}
             className="max-h-[85vh] max-w-[92vw] rounded-lg object-contain"
           />
         </div>

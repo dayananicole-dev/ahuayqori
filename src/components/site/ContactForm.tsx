@@ -33,7 +33,7 @@ const tipos = [
   "Otro",
 ];
 
-export function ContactForm({ defaultProduct }: { defaultProduct?: string }) {
+export function ContactForm({ defaultProduct }: { defaultProduct?: string | undefined }) {
   const [sent, setSent] = useState(false);
   const {
     register,

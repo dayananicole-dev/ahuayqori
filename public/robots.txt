@@ -3,4 +3,4 @@ Allow: /
 Disallow: /politica-de-privacidad
 Disallow: /terminos-y-condiciones
 
-Sitemap: /sitemap.xml
+Sitemap: https://ahuayqori.lovable.app/sitemap.xml
