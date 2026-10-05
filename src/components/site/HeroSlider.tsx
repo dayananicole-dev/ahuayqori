@@ -54,10 +54,11 @@ export function HeroSlider() {
   const go = useCallback((n: number) => setIndex((n + slides.length) % slides.length), []);
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || videoOpen) return;
     const t = setTimeout(() => go(index + 1), 5000);
     return () => clearTimeout(t);
-  }, [index, paused, go]);
+  }, [index, paused, videoOpen, go]);
+
 
   return (
     <section
