@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Play, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 /** Video de ejemplo sobre el aguaymanto (Agencia Andina). Cambiar por el video oficial de la empresa. */
 export const heroVideoUrl = "https://www.youtube.com/embed/TpypQL0JmJc?autoplay=1&rel=0";
@@ -80,5 +79,3 @@ export function VideoModal({ open, onClose }: { open: boolean; onClose: () => vo
     </div>
   );
 }
-
-export const videoModalClass = cn();
