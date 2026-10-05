@@ -156,7 +156,7 @@ function QuienesSomos() {
           <SectionTitle eyebrow="Nuestro compromiso" title="Tres pilares que sostienen la empresa" />
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {commitments.map((c, i) => {
-              const Icon = commitmentIcons[i];
+              const Icon = commitmentIcons[i] ?? Leaf;
               return (
                 <Reveal key={c.title} delay={i * 100}>
                   <article className="border-border bg-card card-lift h-full rounded-xl border p-8">
