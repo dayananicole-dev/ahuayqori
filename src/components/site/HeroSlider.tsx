@@ -175,6 +175,9 @@ export function HeroSlider() {
           </div>
         </div>
       </div>
+
+      <VideoModal open={videoOpen} onClose={closeVideo} />
     </section>
   );
 }
+
