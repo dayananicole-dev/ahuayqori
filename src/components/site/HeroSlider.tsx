@@ -131,6 +131,10 @@ export function HeroSlider() {
                   </Button>
                 ))}
               </div>
+              <div className="mt-3 flex">
+                <VideoButton onClick={openVideo} tabIndex={i === index ? 0 : -1} />
+              </div>
+
             </div>
           ))}
         </div>
