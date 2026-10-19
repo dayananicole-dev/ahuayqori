@@ -47,7 +47,7 @@ function Index() {
           <div>
             <SectionTitle
               eyebrow="Sobre la empresa"
-              title="Comprometidos con la calidad del aguaymanto peruano de Limatambo"
+              title="Comprometidos con la calidad del aguaymanto peruano limatanbeño"
               text="Somos una empresa dedicada a la producción y comercialización de aguaymanto, comprometida con ofrecer productos de calidad y construir relaciones comerciales duraderas con nuestros clientes."
             />
             <Reveal delay={120}>
