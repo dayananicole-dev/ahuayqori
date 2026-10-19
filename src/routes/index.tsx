@@ -46,8 +46,8 @@ function Index() {
         <div className="container-page grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <SectionTitle
-              eyebrow="Sobre nosotros"
-              title="Comprometidos con la calidad del aguaymanto peruano"
+              eyebrow="Sobre la empresa"
+              title="Comprometidos con la calidad del aguaymanto peruano de Limatambo"
               text="Somos una empresa dedicada a la producción y comercialización de aguaymanto, comprometida con ofrecer productos de calidad y construir relaciones comerciales duraderas con nuestros clientes."
             />
             <Reveal delay={120}>
