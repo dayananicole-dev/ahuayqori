@@ -21,7 +21,7 @@ const slides: Slide[] = [
   {
     image: hero1,
     alt: "Aguaymanto fresco peruano con su cáliz abierto sobre madera",
-    title: "Aguaymanto peruano, calidad que nace en nuestra tierra",
+    title: "Aguaymanto peruano, calidad que nace en nuestra tierra de Limatambo",
     text: "Producimos y comercializamos aguaymanto seleccionado, llevando el sabor y la calidad del campo peruano a nuestros clientes.",
     actions: [
       { label: "Conocer nuestros productos", to: "/productos", variant: "gold" },
