@@ -89,8 +89,8 @@ function Index() {
         <div className="container-page">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <SectionTitle
-              eyebrow="Nuestros productos"
-              title="Aguaymanto seleccionado para cada tipo de cliente"
+              eyebrow="Nuestros productos bamdera"
+              title="Aguaymanto seleccionado para cada nesecidad de los peruanos"
               className="max-w-2xl"
             />
             <Reveal delay={100}>
