@@ -18,7 +18,7 @@ export const Route = createFileRoute("/noticias/$slug")({
     const { item } = loaderData;
     return {
       meta: [
-        { title: `${item.title} | Aguaymanto Perú` },
+        { title: `${item.title} | Aguay Qori` },
         { name: "description", content: item.excerpt },
         { property: "og:title", content: item.title },
         { property: "og:description", content: item.excerpt },

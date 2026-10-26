@@ -8,13 +8,13 @@ import n1 from "@/assets/noticia-1.jpg";
 export const Route = createFileRoute("/noticias/")({
   head: () => ({
     meta: [
-      { title: "Noticias y actualidad | Aguaymanto Perú" },
+      { title: "Noticias y actualidad | Aguay Qori" },
       {
         name: "description",
         content:
           "Novedades de la empresa, información sobre el cultivo del aguaymanto, mercado y producción responsable.",
       },
-      { property: "og:title", content: "Noticias y actualidad | Aguaymanto Perú" },
+      { property: "og:title", content: "Noticias y actualidad | Aguay Qori" },
       {
         property: "og:description",
         content: "Novedades de la empresa y del sector del aguaymanto peruano.",

@@ -4,13 +4,13 @@ import { company, contact } from "@/config/site";
 export const Route = createFileRoute("/politica-de-privacidad")({
   head: () => ({
     meta: [
-      { title: "Política de privacidad | Aguaymanto Perú" },
+      { title: "Política de privacidad | Aguay Qori" },
       {
         name: "description",
         content:
           "Política de privacidad sobre el tratamiento de los datos personales enviados a través del formulario de contacto del sitio.",
       },
-      { property: "og:title", content: "Política de privacidad | Aguaymanto Perú" },
+      { property: "og:title", content: "Política de privacidad | Aguay Qori" },
       {
         property: "og:description",
         content: "Cómo tratamos los datos personales enviados desde nuestro sitio web.",

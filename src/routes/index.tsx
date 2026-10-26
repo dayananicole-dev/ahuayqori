@@ -16,7 +16,7 @@ import about from "@/assets/about.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aguaymanto Perú | Venta de aguaymanto fresco y al por mayor - Limatambo" },
+      { title: "Aguay Qori | Venta de aguaymanto fresco y al por mayor - Limatambo" },
       {
         name: "description",
         content:
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Aguaymanto Perú | Venta de aguaymanto fresco y al por mayor",
+        content: "Aguay Qori | Venta de aguaymanto fresco y al por mayor",
       },
       {
         property: "og:description",
