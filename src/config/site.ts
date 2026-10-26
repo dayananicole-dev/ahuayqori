@@ -4,16 +4,16 @@
  */
 
 export const company = {
-  name: "[NOMBRE DE LA EMPRESA]",
-  shortName: "Aguaymanto Perú",
-  tagline: "Calidad y compromiso desde el campo peruano.",
-  legalName: "[NOMBRE DE LA EMPRESA]",
+  name: "Aguay Qori",
+  shortName: "Aguay Qori",
+  tagline: "Cultivamos y comercializamos aguaymanto peruano de la más alta calidad.",
+  legalName: "Aguay Qori",
   foundedLabel: "[AÑO]",
 };
 
 export const contact = {
-  whatsapp: "51999999999", // [WHATSAPP] solo dígitos, con código de país
-  whatsappDisplay: "[WHATSAPP]",
+  whatsapp: "51956348725",
+  whatsappDisplay: "+51 956 348 725",
   phone: "+51 943 569 100",
   phoneHref: "tel:+51943569100",
   email: "contacto@ahuayqori.com",

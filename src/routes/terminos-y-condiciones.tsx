@@ -4,13 +4,13 @@ import { company } from "@/config/site";
 export const Route = createFileRoute("/terminos-y-condiciones")({
   head: () => ({
     meta: [
-      { title: "Términos y condiciones | Aguaymanto Perú" },
+      { title: "Términos y condiciones | Aguay Qori" },
       {
         name: "description",
         content:
           "Términos y condiciones de uso del sitio web y de las consultas comerciales realizadas a través de él.",
       },
-      { property: "og:title", content: "Términos y condiciones | Aguaymanto Perú" },
+      { property: "og:title", content: "Términos y condiciones | Aguay Qori" },
       {
         property: "og:description",
         content: "Condiciones de uso del sitio y de las consultas comerciales.",
