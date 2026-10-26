@@ -31,7 +31,7 @@ export function Logo({ tone = "light" }: { tone?: "light" | "dark" }) {
             tone === "dark" ? "text-cream" : "text-primary",
           )}
         >
-          AGUAYMANTO PERÚ
+          AGUAY QORI
         </span>
         <span
           className={cn(
