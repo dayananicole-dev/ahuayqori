@@ -57,7 +57,7 @@ function QuienesSomos() {
             />
           </Reveal>
           <div>
-            <SectionTitle eyebrow="Sobre nuestra Empresa" title="Quiénes somos y qué hacemos" />
+            <SectionTitle eyebrow="Sobre nuestra Empresa" title="La historia detrás de cada fruto" />
             <Reveal delay={100}>
               <div className="text-muted-foreground mt-6 space-y-4 text-sm leading-relaxed sm:text-base">
                 <p>
